@@ -1,23 +1,22 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    <h2>o hai doggie</h2>
+    <div>
+      <Progressb />
+    </div>
   </div>
 </template>
 
 <script>
+import Progressb from './components/Progressb.vue'
 export default {
-  name: 'App'
+  name: 'app',
+  data () {
+    return {
+    }
+  },
+  components: {
+    Progressb
+  }
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
