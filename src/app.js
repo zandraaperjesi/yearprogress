@@ -8,7 +8,7 @@ const app = express()
 app.use(morgan('combine'))
 app.use(bodyParser.json())
 app.use(cors())
-app.use(serveStatic('./client/dist', {'index': ['index.html']}))
+app.use(serveStatic('./client/dist'))
 
 app.get('/status', (req, res) => {
   res.send({
