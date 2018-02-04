@@ -2,13 +2,13 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const morgan = require('morgan')
-const serveStatic = require('serve-static')
+var serveStatic = require('serve-static')
 
 const app = express()
 app.use(morgan('combine'))
 app.use(bodyParser.json())
 app.use(cors())
-app.use(serveStatic("../client/dist"))
+app.use(serveStatic('./client/dist', {'index': ['index.html']}))
 
 app.get('/status', (req, res) => {
   res.send({
